@@ -4,8 +4,8 @@ import dataFromServer from "../data.json";
 export const App = () => {
   return (
     <div className="flexCenter bg-main min-h-screen font-hanken">
-      <div className="bg-white w-[327px]">
-        <div className="flexCenter mainGradient p-6 rounded-b-2xl">
+      <div className="bg-white w-[327px] sm:flex sm:rounded-2xl sm:w-max">
+        <div className="flexCenter mainGradient p-6 rounded-b-2xl sm:w-[280px] sm:rounded-2xl">
           <span className="text-lightLavendar font-bold text-xl mb-5">
             Your Result
           </span>
@@ -23,7 +23,7 @@ export const App = () => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col justify-start p-6">
+        <div className="flex flex-col justify-start p-6 sm:justify-center sm:w-max">
           <span className="font-semibold text-lg text-darkGrayBlue mb-5">
             Summary
           </span>
@@ -32,7 +32,7 @@ export const App = () => {
               {dataFromServer.map((data) => (
                 <li key={data.category}>
                   <div
-                    className={cn("resultCard", {
+                    className={cn("resultCard sm:gap-14", {
                       "bg-lightRedBcg": data.category === "Reaction",
                       "bg-orangeYellowBcg": data.category === "Memory",
                       "bg-greenTealBcg": data.category === "Verbal",
