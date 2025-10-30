@@ -7,6 +7,7 @@
   --color-white: oklch(1 0 0);
   --color-lightLavendar: oklch(0.8491 0.0778 285.38);
   --color-darkGrayBlue: oklch(0.3576 0.0549 268.3);
+  --color-darkGrayBlueFaded: oklch(0.3576 0.0549 268.3 / 50%);
 
   --color-gradientFrom: oklch(0.5884 0.2364 285.76);
   --color-gradientTo: oklch(0.4611 0.2661 270.02);
@@ -15,9 +16,13 @@
   --color-circleGradientTo: oklch(0.4102 0.2416 269.47 / 0%);
 
   --color-lightRed: oklch(0.6843 0.2045 24.3);
+  --color-lightRedBcg: oklch(0.6843 0.2045 24.3 / 10%);
   --color-orangeYellow: oklch(0.8139 0.1654 75.39);
+  --color-orangeYellowBcg: oklch(0.8139 0.1654 75.39 / 10%);
   --color-greenTeal: oklch(0.7085 0.1426 168.5);
+  --color-greenTealBcg: oklch(0.7085 0.1426 168.5 / 10%);
   --color-cobaltBlue: oklch(0.4208 0.2542 265.77);
+  --color-cobaltBlueBcg: oklch(0.4208 0.2542 265.77 / 10%);
 }
 
 @layer components {
@@ -27,5 +32,28 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  .mainGradient {
+    background-image: linear-gradient(
+      180deg,
+      hsl(252, 100%, 67%),
+      hsl(241, 81%, 54%)
+    );
+  }
+
+  .circleGradient {
+    background-image: linear-gradient(
+      180deg,
+      hsla(256, 72%, 46%, 1),
+      hsla(241, 72%, 46%, 0)
+    );
+  }
+
+  .resultCard {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 0.5rem;
   }
 }

@@ -1,28 +1,81 @@
+import reactionImg from "./assets/images/icon-reaction.svg";
+import memoryImg from "./assets/images/icon-memory.svg";
+import verbalImg from "./assets/images/icon-verbal.svg";
+import visualImg from "./assets/images/icon-visual.svg";
+
 export const App = () => {
   return (
     <div className="flexCenter bg-main min-h-screen font-hanken">
-      <div className="flexCenter bg-gradient-to-b from-gradientFrom to-gradientTo p-6 rounded-b-2xl">
-        <span className="text-lightLavendar font-bold text-xl">Your Result</span>
-        <div className="flexCenter rounded-full bg-gradient-to-b from-circleGradientFrom to-circleGradientTo h-32 w-32">
-          <div className="flexCenter">
-            <span className="text-white font-extrabold text-[48px]">76 </span> 
-            <span className="text-darkGrayBlue">of 100</span>
+      <div className="bg-white w-[327px]">
+        <div className="flexCenter mainGradient p-6 rounded-b-2xl">
+          <span className="text-lightLavendar font-bold text-xl mb-5">
+            Your Result
+          </span>
+          <div className="flexCenter rounded-full circleGradient h-32 w-32 mb-5">
+            <div className="flexCenter">
+              <span className="text-white font-extrabold text-5xl">76 </span>
+              <span className="text-darkGrayBlueFaded">of 100</span>
+            </div>
+          </div>
+          <div className="flexCenter text-center gap-2">
+            <span className="text-white font-bold text-2xl">Great</span>
+            <span className="text-lightLavendar pb-1">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </span>
           </div>
         </div>
-        <span>Great</span>
-        <span>
-          You scored higher than 65% of the people who have taken these tests.
-        </span>
-      </div>
-      <div>
-        <span>Summary</span>
-        <div>
-          <div>Reaction</div>
-          <div>Reaction</div>
-          <div>Reaction</div>
-          <div>Reaction</div>
+        <div className="flex flex-col justify-start p-6">
+          <span className="font-semibold text-lg text-darkGrayBlue">
+            Summary
+          </span>
+          <div>
+            <div className=" resultCard bg-lightRedBcg ">
+              <div className="flex gap-3 text-lightRed ">
+                <img src={reactionImg} alt="reaction icon" />
+                <span>Reaction</span>
+              </div>
+              <div>
+                <span className="text-darkGrayBlue">80</span>{" "}
+                <span className="text-darkGrayBlueFaded"> / 100</span>
+              </div>
+            </div>
+
+            <div className=" resultCard bg-orangeYellowBcg">
+              <div className="flex gap-3">
+                <img src={memoryImg} alt="memory icon" />
+                <span>Memory</span>
+              </div>
+              <div>
+                <span className="text-darkGrayBlue">80</span>{" "}
+                <span className="text-darkGrayBlueFaded"> / 100</span>
+              </div>
+            </div>
+
+            <div className="resultCard bg-greenTealBcg">
+              <div className="flex gap-3">
+                <img src={verbalImg} alt="verbal icon" />
+                <span>Reaction</span>
+              </div>
+              <div>
+                <span className="text-darkGrayBlue">80</span>{" "}
+                <span className="text-darkGrayBlueFaded"> / 100</span>
+              </div>
+            </div>
+
+            <div className="resultCard bg-cobaltBlueBcg">
+              <div className="flex gap-3">
+                <img src={visualImg} alt="visual icon" />
+                <span>Reaction</span>
+              </div>
+              <div>
+                <span className="text-darkGrayBlue">80</span>{" "}
+                <span className="text-darkGrayBlueFaded"> / 100</span>
+              </div>
+            </div>
+          </div>
+          <button>Continue</button>
         </div>
-        <button>Continue</button>
       </div>
     </div>
   );
