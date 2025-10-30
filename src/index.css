@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@theme {
+  --font-hanken: Hanken Grotesk, sans-serif;
+
+  --color-main: oklch(0.9577 0.0199 267.29);
+  --color-white: oklch(1 0 0);
+  --color-lightLavendar: oklch(0.8491 0.0778 285.38);
+  --color-darkGrayBlue: oklch(0.3576 0.0549 268.3);
+
+  --color-gradientFrom: oklch(0.5884 0.2364 285.76);
+  --color-gradientTo: oklch(0.4611 0.2661 270.02);
+
+  --color-circleGradientFrom: oklch(0.4388 0.2322 283.49);
+  --color-circleGradientTo: oklch(0.4102 0.2416 269.47 / 0%);
+
+  --color-lightRed: oklch(0.6843 0.2045 24.3);
+  --color-orangeYellow: oklch(0.8139 0.1654 75.39);
+  --color-greenTeal: oklch(0.7085 0.1426 168.5);
+  --color-cobaltBlue: oklch(0.4208 0.2542 265.77);
+}
+
+@layer components {
+  .flexCenter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
