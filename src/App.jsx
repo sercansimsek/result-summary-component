@@ -47,7 +47,7 @@ export const App = () => {
                         "text-cobaltBlue": data.category === "Visual",
                       })}
                     >
-                      <img src={`${data.icon}`} alt={`${data.category} icon`} />
+                      <img src={data.icon} alt={`${data.category} icon`} />
                       <span>{data.category}</span>
                     </div>
                     <div>
