@@ -1,5 +1,5 @@
 import cn from "classnames";
-import dataFromServer from "../data.json";
+import { dataFromServer } from "../data";
 
 export const App = () => {
   return (
